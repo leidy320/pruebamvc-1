@@ -42,17 +42,7 @@ namespace pruebamvc_1.Models
         [DisplayName("Fecha Nacimiento")]
         public DateTime fecha_nacimiento { get; set; }
         [DisplayName("Edad")]
-        public int edad { get {
-                DateTime now=DateTime.Today;
-                int edad= DateTime.Today.Year - fecha_nacimiento.Year;
-                if (DateTime.Today < fecha_nacimiento.AddYears(edad)){
-                    return --edad;
-                }
-                else
-                {
-                    return edad;
-                }
-            } }
+        public int edad { get; set; }
     }
     
 }
